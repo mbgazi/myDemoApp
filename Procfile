@@ -1,1 +1,1 @@
-web: java -Dserver.port=4567 -jar target/*.jar
+web: java -jar target/helloworld.jar
