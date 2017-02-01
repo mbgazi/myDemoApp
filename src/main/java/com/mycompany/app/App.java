@@ -26,11 +26,11 @@ public class App
 
 	ArrayList<Integer> outarray = new ArrayList<Integer>();
 
-        for (Integer elt : array) {
-   	     if (elt > a && elt<b) outarray.add(elt);
+        for (Integer i : array) {
+   	     if (i > a && i<b) outarray.add(i);
         }
        
-	boolean retval = outarray.isEmpty();
+	boolean retval = !(outarray.isEmpty());
    	return retval;
     }//end  of valuesBetween
 

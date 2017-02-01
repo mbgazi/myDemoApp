@@ -14,17 +14,17 @@ public class AppTest
  
    public void  testNotEmptyArray(){
      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(5,9,1,20,3,7));   
-     assertFalse(new App().valuesBetween(array, 2,10));
+     assertTrue(new App().valuesBetween(array, 2,10));
    }
   
    public void testAllValuesGreater(){
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(5,9,1,20,3,7));
-      assertTrue(new App().valuesBetween(array, 25,30));
+      assertFalse(new App().valuesBetween(array, 25,30));
    }
 
    public void testAllValuesSmaller(){
       ArrayList<Integer> array = new ArrayList<>(Arrays.asList(5,9,1,20,3,7));
-      assertTrue(new App().valuesBetween(array, -1,0));
+      assertFalse(new App().valuesBetween(array, -1,0));
    }
 
    public void testNothingBetween(){
@@ -32,8 +32,12 @@ public class AppTest
       assertFalse(new App().valuesBetween(array, 3,3));
    }
 
-   public void testNull(){
+   public void testArrayNull(){
       assertFalse(new App().valuesBetween(null, 1, 5));
    }
-
+  
+   public void testReturnedListNotEmpty(){
+      ArrayList<Integer> array = new ArrayList<>(Arrays.asList(5,9,1,20,3,7));
+      assertTrue(new App().valuesBetween(array, 2,10));
+   }
  }
